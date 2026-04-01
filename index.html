@@ -2,20 +2,20 @@
 <html lang="pt-br">
 <head>
     <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '853850953694387');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
-/></noscript>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '853850953694387');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
+    /></noscript>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,10 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-urgent { background-color: #e11d48; }
-        .btn-checkout { background-color: #16a34a; }
+        /* BOTÃO VERMELHO PERSUASIVO */
+        .btn-checkout { background-color: #df0000; transition: 0.3s; }
+        .btn-checkout:hover { background-color: #b30000; transform: scale(1.02); }
+        
         .hidden-btn { display: none; }
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
         .pulse { animation: pulse 2s infinite; }
@@ -62,8 +65,7 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
     <main class="max-w-3xl mx-auto px-4 py-8">
         
         <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 leading-tight">
-    Descubra o
-<span class="text-red-600">segredo natural</span> que nenhum hospital vai te contar para equilibrar o açúcar 😱. Assista ao vídeo até o fim para saber como ter acesso! 👇
+            Descubra o <span class="text-red-600">segredo natural</span> que nenhum hospital vai te contar para equilibrar o açúcar 😱. Assista ao vídeo até o fim para saber como ter acesso! 👇
         </h2>
 
         <div class="flex justify-center items-center gap-2 mb-4">
@@ -86,11 +88,11 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
         <p class="text-center text-gray-500 text-xs italic mb-8">Assista ao vídeo até o final para saber como funciona.</p>
 
         <div id="cta-button" class="hidden-btn text-center mb-12">
-            <a href="https://pay.kambafy.com/checkout/73f71528-93e0-496f-b1f1-7ab00a926459" class="btn-checkout text-white font-extrabold py-5 px-10 rounded-xl text-xl md:text-2xl shadow-2xl transition-all block pulse hover:brightness-110">
-               Garanta seu produto agora!
+            <a href="https://pay.kambafy.com/checkout/73f71528-93e0-496f-b1f1-7ab00a926459" class="btn-checkout text-white font-extrabold py-5 px-10 rounded-xl text-xl md:text-2xl shadow-2xl transition-all block pulse">
+                👉🏻 GARANTIR MEU ACESSO AGORA!
             </a>
-            <p class="text-sm text-gray-600 mt-3 font-semibold">
-                
+            <p class="text-sm text-gray-600 mt-3 font-semibold text-center">
+                ✅ Compra 100% Segura e Acesso Imediato
             </p>
         </div>
 
@@ -103,7 +105,7 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
                     <div>
                         <p class="font-bold text-blue-600">Eduardo Matsinhe</p>
                         <p class="text-sm">Estou a usar há 10 dias e os níveis de açúcar estão muito melhores. Obrigado!</p>
-                        <p class="text-xs text-gray-400 mt-1 italic">Curtir · Responder · 1 min · <span class="text-gray-600 font-bold">Resposta do autor:</span> Ficamos felizes por seu feedback!</p>
+                        <p class="text-xs text-gray-400 mt-1 italic">Curtir · Responder · 1 min</p>
                     </div>
                 </div>
 
@@ -112,7 +114,7 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
                     <div>
                         <p class="font-bold text-blue-600">Sónia Nhaca</p>
                         <p class="text-sm">Minha mãe está super feliz com o resultado! Já não sente tonturas.</p>
-                        <p class="text-xs text-gray-400 mt-1 italic">Curtir · Responder · 5 min · <span class="text-gray-600 font-bold">Resposta do autor:</span> Essa é a eficácia do Glicobalance!</p>
+                        <p class="text-xs text-gray-400 mt-1 italic">Curtir · Responder · 5 min</p>
                     </div>
                 </div>
 
@@ -121,7 +123,7 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
                     <div>
                         <p class="font-bold text-blue-600">Ricardo Mondlane</p>
                         <p class="text-sm">Vale a pena! Notei diferença logo na primeira semana.</p>
-                        <p class="text-xs text-gray-400 mt-1">Curtir · Responder · 12 min</p>
+                        <p class="text-xs text-gray-400 mt-1 italic">Curtir · Responder · 12 min</p>
                     </div>
                 </div>
 
@@ -130,7 +132,7 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
                     <div>
                         <p class="font-bold text-blue-600">Alice Bauque</p>
                         <p class="text-sm">Produto muito bom, recomendo a quem sofre com açúcar alto.</p>
-                        <p class="text-xs text-gray-400 mt-1">Curtir · Responder · 22 min</p>
+                        <p class="text-xs text-gray-400 mt-1 italic">Curtir · Responder · 22 min</p>
                     </div>
                 </div>
 
@@ -139,7 +141,7 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
                     <div>
                         <p class="font-bold text-blue-600">Paulo Cuambe</p>
                         <p class="text-sm">Estou impressionada! Melhorou o meu bem-estar de forma geral.</p>
-                        <p class="text-xs text-gray-400 mt-1">Curtir · Responder · 45 min</p>
+                        <p class="text-xs text-gray-400 mt-1 italic">Curtir · Responder · 45 min</p>
                     </div>
                 </div>
             </div>
@@ -147,18 +149,15 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
     </main>
 
     <footer class="bg-white border-t py-8 text-center text-gray-500 text-xs px-6">
-        <p class="font-bold mb-2">Saúde e Equilíbrio Glicêmico
-</p>
+        <p class="font-bold mb-2">Saúde e Equilíbrio Glicêmico</p>
         <div class="flex justify-center gap-4 flex-wrap underline">
             <span>Termos</span> <span>Privacidade</span> <span>Contato</span>
         </div>
     </footer>
 
     <script>
-        // Data Atual
         document.getElementById('data-atual').innerText = new Date().toLocaleDateString('pt-BR');
 
-        // Timer 30 min
         let time = 1799; 
         setInterval(() => {
             const min = Math.floor(time / 60);
@@ -167,20 +166,17 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
             if (time > 0) time--;
         }, 1000);
 
-        // Contador de pessoas online
         let count = 412;
         setInterval(() => {
             count += Math.floor(Math.random() * 7) - 3;
             document.getElementById('online-count').innerText = count;
         }, 3000);
 
-        // DELAY DO BOTÃO PARA 2:48 (168 segundos)
-        // 2 min * 60s = 120s + 48s = 168s = 0ms
+        // DELAY ZERO (APARECE LOGO NO INÍCIO)
         setTimeout(() => { 
             document.getElementById('cta-button').style.display = 'block'; 
-        }, 168000);
+        }, 0);
 
-        // Pop-up de Vendas
         const vendas = [
             "🔴 Maria de Nampula acabou de comprar há 1 min.",
             "🔴 José de Maputo acabou de comprar há 3 min.",
@@ -191,13 +187,15 @@ src="https://www.facebook.com/tr?id=853850953694387&ev=PageView&noscript=1"
         ];
         function showPop() {
             const pop = document.getElementById('sales-pop');
-            document.getElementById('pop-content').innerText = vendas[Math.floor(Math.random() * vendas.length)];
-            pop.style.display = 'block';
-            setTimeout(() => { 
-                pop.style.display = 'none'; 
-                let proximoTempo = Math.floor(Math.random() * (22000 - 12000 + 1)) + 12000;
-                setTimeout(showPop, proximoTempo);
-            }, 5000);
+            if(pop) {
+                document.getElementById('pop-content').innerText = vendas[Math.floor(Math.random() * vendas.length)];
+                pop.style.display = 'block';
+                setTimeout(() => { 
+                    pop.style.display = 'none'; 
+                    let proximoTempo = Math.floor(Math.random() * (22000 - 12000 + 1)) + 12000;
+                    setTimeout(showPop, proximoTempo);
+                }, 5000);
+            }
         }
         setTimeout(showPop, 7000);
     </script>
