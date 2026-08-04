@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo Glicose Sob Controle</title>
+    <style>
+        :root {
+            --primary: #0e8388;
+            --primary-dark: #2e4f4f;
+            --accent: #ff6b6b;
+            --cta-green: #25d366;
+            --cta-hover: #1eaa53;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+
+        /* Barra de Alerta Topo */
+        .top-bar {
+            background-color: #dc2626;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Seção do Cabeçalho */
+        header {
+            padding: 40px 0 20px 0;
+            text-align: center;
+        }
+
+        h1.headline {
+            font-size: 28px;
+            color: var(--primary-dark);
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        h1.headline span {
+            color: #dc2626;
+            background-color: #fef2f2;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        p.subheadline {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        /* Container do Vídeo VTurb */
+        .video-box {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Seções de Conteúdo */
+        .section-box {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        h2.section-title {
+            font-size: 22px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .pain-list {
+            list-style: none;
+        }
+
+        .pain-list li {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .pain-list li::before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Benefícios */
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .benefit-icon {
+            background: #e6f4f1;
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Depoimentos */
+        .testimonial {
+            background: #f1f5f9;
+            padding: 20px;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial .author {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: normal;
+            color: var(--primary-dark);
+            font-size: 14px;
+        }
+
+        /* Cartão de Oferta */
+        .offer-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+            border: 2px solid var(--cta-green);
+            border-radius: 16px;
+            padding: 35px 20px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.15);
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        .price-new {
+            font-size: 42px;
+            color: #15803d;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        /* Botão CTA */
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--cta-green);
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: background-color 0.2s, transform 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--cta-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Garantia */
+        .guarantee {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid #e2e8f0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            h1.headline {
+                font-size: 22px;
+            }
+            p.subheadline {
+                font-size: 15px;
+            }
+            .price-new {
+                font-size: 34px;
+            }
+            .btn-cta {
+                font-size: 17px;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        ⚠️ ATENÇÃO: Métodos Naturais Revelados para Equilibrar a Glicose
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="headline">Descubra o Método Natural para <span>Equilibrar a Glicose</span> Sem Deixar de Comer o Que Você Gosta</h1>
+            <p class="subheadline">Um segredo simples, prático e 100% natural para retomar o controle da sua saúde e viver sem o medo constante da diabetes.</p>
+        </header>
+
+        <!-- Player de Vídeo VTurb Integrado -->
+        <div class="video-box">
+            <vturb-smartplayer id="vid-6a71a709bc463236255fa004" style="display: block; margin: 0 auto; width: 100%; ">
+                <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 57.50798722044729% 0 0; z-index: 0; background-color: black;"></div>
+            </vturb-smartplayer>
+            <script type="text/javascript">
+                var s=document.createElement("script");
+                s.src="https://scripts.converteai.net/06808005-743e-46b8-964d-ff66e469c59c/players/6a71a709bc463236255fa004/v4/player.js", s.async=!0,document.head.appendChild(s);
+            </script>
+        </div>
+
+        <!-- Botão Principal de Chamada -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <a href="https://www.ratixpay.co.mz/checkout.html?produto=8N7HMCKJC" class="btn-cta">QUERO CONTROLAR MINHA GLICOSE AGORA</a>
+        </div>
+
+        <div class="section-box">
+            <h2 class="section-title">Você se identifica com alguma destas situações?</h2>
+            <ul class="pain-list">
+                <li>Sente tonturas, cansaço excessivo ou sede constante ao longo do dia?</li>
+                <li>Vive com medo de picar o dedo e ver os números da glicose lá no alto?</li>
+                <li>Teve que cortar drasticamente os alimentos que mais ama por causa da dieta restritiva?</li>
+                <li>Sente ansiedade só de pensar nas complicações de longo prazo da diabetes?</li>
+            </ul>
+            <p style="margin-top: 15px; font-weight: 500; text-align: center;">Se você respondeu <strong>SIM</strong>, saiba que a culpa NÃO é sua. O verdadeiro problema é que ninguém te ensinou como equilibrar o organismo de forma simples.</p>
+        </div>
+
+        <div class="section-box">
+            <h2 class="section-title">O Que Você Vai Aprender no Programa:</h2>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div>
+                    <strong>O Protocolo do Açúcar Controlado:</strong> Como combater os picos de glicose logo nas primeiras horas do dia.
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div>
+                    <strong>Substituições Inteligentes:</strong> Como continuar comendo pratos saborosos sem colocar sua saúde em risco.
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div>
+                    <strong>Segredos dos Ingredientes Naturais:</strong> Chás, alimentos e combinações baratas que ajudam na sensibilidade à insulina.
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div>
+                    <strong>Plano Prático de Rotina:</strong> Um guia diário sem complicação, pensado para quem tem uma vida corrida.
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2 class="section-title">Depoimentos de Quem Já Testou:</h2>
+            
+            <div class="testimonial">
+                "Eu vivia preocupado com a minha glicose sempre acima do normal. Depois de aplicar as recomendações do guia por 3 semanas, consegui estabilizar meus níveis e me sinto com muito mais energia no dia a dia!"
+                <span class="author">— João M., 52 anos</span>
+            </div>
+
+            <div class="testimonial">
+                "O melhor de tudo foi não precisar passar fome nem gastar fortunas no mercado. As receitas e dicas de substituição valem cada centavo."
+                <span class="author">— Maria S., 46 anos</span>
+            </div>
+        </div>
+
+        <!-- Oferta Principal -->
+        <div class="offer-card">
+            <h2 style="color: var(--primary-dark); margin-bottom: 10px;">Garantir Acesso Imediato</h2>
+            <p class="price-old">De 1.500 MT</p>
+            <p class="price-new">Por Apenas 297 MT</p>
+            <p style="margin-bottom: 25px; color: var(--text-muted);">Pagamento Único • Acesso Vitalício • Envio Imediato</p>
+            
+            <a href="https://www.ratixpay.co.mz/checkout.html?produto=8N7HMCKJC" class="btn-cta">QUERO APROVEITAR A OFERTA</a>
+
+            <div class="guarantee">
+                🛡️ <strong>Garantia Incondicional de 7 Dias:</strong> Se você não gostar do conteúdo, devolvemos 100% do seu dinheiro.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Protocolo Saúde & Bem-Estar. Todos os direitos reservados.</p>
+            <p style="margin-top: 5px;">Aviso: Este produto não substitui o aconselhamento médico profissional.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
